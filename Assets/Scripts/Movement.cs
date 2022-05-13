@@ -23,7 +23,7 @@ public class Movement : MonoBehaviour
         if (Input.GetKey(KeyCode.A)) {
             Debug.Log("Pressed A - Rotate Left");
         }
-        if (Input.GetKey(KeyCode.D)) {
+        else if (Input.GetKey(KeyCode.D)) {
             Debug.Log("Pressed D - Rotate Right");
         }
     }
