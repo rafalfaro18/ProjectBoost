@@ -20,5 +20,11 @@ public class Movement : MonoBehaviour
         if (Input.GetKey(KeyCode.Space)) {
             Debug.Log("Pressed Space - Thrusting");
         }
+        if (Input.GetKey(KeyCode.A)) {
+            Debug.Log("Pressed A - Rotate Left");
+        }
+        if (Input.GetKey(KeyCode.D)) {
+            Debug.Log("Pressed D - Rotate Right");
+        }
     }
 }
