@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    [SerializeField] float mainThrust = 150f;
     Rigidbody rb;
-    [SerializeField] float thrustPower = 150f;
     
     // Start is called before the first frame update
     void Start()
@@ -22,7 +22,7 @@ public class Movement : MonoBehaviour
 
     void ProcessThrust() {
         if (Input.GetKey(KeyCode.Space)) {
-            rb.AddRelativeForce(Vector3.up * thrustPower * Time.deltaTime); // Relative to the object.
+            rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime); // Relative to the object.
         }
     }
 
