@@ -21,7 +21,7 @@ public class Movement : MonoBehaviour
 
     void ProcessThrust() {
         if (Input.GetKey(KeyCode.Space)) {
-            rb.AddRelativeForce(0,1,0); // Relative to the object.
+            rb.AddRelativeForce(Vector3.up); // Relative to the object.
         }
     }
 
