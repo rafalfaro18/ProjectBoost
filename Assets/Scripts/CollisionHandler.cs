@@ -6,16 +6,16 @@ public class CollisionHandler : MonoBehaviour
         switch (other.gameObject.tag)
         {
             case "Friendly":
-                Debug.Log("Friendly");
-                break;
-            case "Fuel":
-                Debug.Log("Fuel");
+                Debug.Log("This thing is friendly");
                 break;
             case "Finish":
-                Debug.Log("Finish");
+                Debug.Log("Congrats, you finished!");
+                break;
+            case "Fuel":
+                Debug.Log("You picked a fuel");
                 break;
             default:
-                Debug.Log("Nothing with an F");
+                Debug.Log("Sorry, you blew up!");
                 break;
         }
     }
