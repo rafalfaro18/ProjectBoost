@@ -28,10 +28,10 @@ public class Movement : MonoBehaviour
 
     void ProcessRotation() {
         if (Input.GetKey(KeyCode.A)) {
-            Debug.Log("Pressed A - Rotate Left");
+            transform.Rotate(Vector3.forward);
         }
         else if (Input.GetKey(KeyCode.D)) {
-            Debug.Log("Pressed D - Rotate Right");
+            transform.Rotate(-Vector3.forward);
         }
     }
 }
