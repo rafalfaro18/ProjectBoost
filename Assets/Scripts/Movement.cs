@@ -28,11 +28,17 @@ public class Movement : MonoBehaviour
     }
 
     void ProcessRotation() {
-        if (Input.GetKey(KeyCode.A)) {
-            transform.Rotate(Vector3.forward * rotationThrust * Time.deltaTime);
+        if (Input.GetKey(KeyCode.A))
+        {
+            ApplyRotation(rotationThrust);
         }
         else if (Input.GetKey(KeyCode.D)) {
-            transform.Rotate(Vector3.back * rotationThrust * Time.deltaTime);
+            ApplyRotation(-rotationThrust);
         }
+    }
+
+    void ApplyRotation(float rotationThisFrame)
+    {
+        transform.Rotate(Vector3.forward * rotationThisFrame * Time.deltaTime);
     }
 }
