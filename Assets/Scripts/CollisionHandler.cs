@@ -16,9 +16,13 @@ public class CollisionHandler : MonoBehaviour
                 Debug.Log("You picked a fuel");
                 break;
             default:
-                Debug.Log("Sorry, you blew up!");
-                SceneManager.LoadScene("Sandbox");
+                ReloadLevel();
                 break;
         }
+    }
+
+    void ReloadLevel()
+    {
+        SceneManager.LoadScene("Sandbox");
     }
 }
