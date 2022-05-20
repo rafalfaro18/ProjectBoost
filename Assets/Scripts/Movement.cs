@@ -25,10 +25,10 @@ public class Movement : MonoBehaviour
 
     void ProcessThrust() {
         if (Input.GetKey(KeyCode.Space)) {
+            rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime); // Relative to the object.
             if(!audioSource.isPlaying){
                 audioSource.Play();
             }
-            rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime); // Relative to the object.
         } else {
             audioSource.Stop();
         }
