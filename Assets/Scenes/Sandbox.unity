@@ -318,7 +318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93829ad2be044439ca74bafa2abe0bff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainThrust: 150
+  mainThrust: 1000
 --- !u!54 &1013717745
 Rigidbody:
   m_ObjectHideFlags: 0
