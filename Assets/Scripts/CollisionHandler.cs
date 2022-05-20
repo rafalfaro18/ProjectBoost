@@ -23,6 +23,6 @@ public class CollisionHandler : MonoBehaviour
 
     void ReloadLevel()
     {
-        SceneManager.LoadScene("Sandbox");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
