@@ -24,6 +24,8 @@ public class CollisionHandler : MonoBehaviour
     }
 
     void StartSuccessSequence(){
+        // TODO: Add SFX upon crash.
+        // TODO: Add Particle Effects upon crash.
         GetComponent<Movement>().enabled = false;
         Invoke("LoadNextLevel", levelLoadDelay);
     }
