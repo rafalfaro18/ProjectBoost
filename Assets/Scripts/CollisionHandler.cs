@@ -16,6 +16,7 @@ public class CollisionHandler : MonoBehaviour
                 Debug.Log("You picked a fuel");
                 break;
             default:
+                GetComponent<Movement>().enabled = false;
                 Invoke("StartCrashSequence", 1.0f);
                 break;
         }
