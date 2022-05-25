@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
 {
+    [SerializeField] float levelLoadDelay = 1.0f;
+    
     void OnCollisionEnter(Collision other) {
         switch (other.gameObject.tag)
         {
@@ -23,7 +25,7 @@ public class CollisionHandler : MonoBehaviour
 
     void StartCrashSequence(){
         GetComponent<Movement>().enabled = false;
-        Invoke("ReloadLevel", 1.0f);
+        Invoke("ReloadLevel", levelLoadDelay);
     }
 
     void LoadNextLevel(){
