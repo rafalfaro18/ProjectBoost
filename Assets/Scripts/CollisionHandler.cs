@@ -16,9 +16,13 @@ public class CollisionHandler : MonoBehaviour
                 Debug.Log("You picked a fuel");
                 break;
             default:
-                Invoke("ReloadLevel", 1.0f);
+                StartCrashSequence();
                 break;
         }
+    }
+
+    void StartCrashSequence(){
+        Invoke("ReloadLevel", 1.0f);
     }
 
     void LoadNextLevel(){
