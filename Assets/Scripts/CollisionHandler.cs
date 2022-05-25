@@ -12,7 +12,7 @@ public class CollisionHandler : MonoBehaviour
                 Debug.Log("This thing is friendly");
                 break;
             case "Finish":
-                LoadNextLevel();
+                StartNextLevelSequence();
                 break;
             case "Fuel":
                 Debug.Log("You picked a fuel");
@@ -26,6 +26,11 @@ public class CollisionHandler : MonoBehaviour
     void StartCrashSequence(){
         GetComponent<Movement>().enabled = false;
         Invoke("ReloadLevel", levelLoadDelay);
+    }
+
+    void StartNextLevelSequence(){
+        GetComponent<Movement>().enabled = false;
+        Invoke("LoadNextLevel", levelLoadDelay);
     }
 
     void LoadNextLevel(){
