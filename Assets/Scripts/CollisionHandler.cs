@@ -15,6 +15,8 @@ public class CollisionHandler : MonoBehaviour
     }
     
     void OnCollisionEnter(Collision other) {
+        if (isTransitioning) { return; }
+        
         switch (other.gameObject.tag)
         {
             case "Friendly":
@@ -30,11 +32,8 @@ public class CollisionHandler : MonoBehaviour
     }
 
     void StartSuccessSequence(){
-        if (!isTransitioning) { 
-            audioSource.PlayOneShot(success);
-        }
-        
         isTransitioning = true;
+        audioSource.PlayOneShot(success);
 
         // TODO: Add Particle Effects upon success.
         GetComponent<Movement>().enabled = false;
@@ -42,11 +41,8 @@ public class CollisionHandler : MonoBehaviour
     }
 
     void StartCrashSequence(){
-        if (!isTransitioning) { 
-            audioSource.PlayOneShot(crash);
-        }
-        
         isTransitioning = true;
+        audioSource.PlayOneShot(crash);
 
         // TODO: Add Particle Effects upon crash.
         GetComponent<Movement>().enabled = false;
