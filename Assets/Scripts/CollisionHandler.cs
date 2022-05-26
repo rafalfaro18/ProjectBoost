@@ -33,6 +33,7 @@ public class CollisionHandler : MonoBehaviour
 
     void StartSuccessSequence(){
         isTransitioning = true;
+        audioSource.Stop();
         audioSource.PlayOneShot(success);
 
         // TODO: Add Particle Effects upon success.
@@ -42,6 +43,7 @@ public class CollisionHandler : MonoBehaviour
 
     void StartCrashSequence(){
         isTransitioning = true;
+        audioSource.Stop();
         audioSource.PlayOneShot(crash);
 
         // TODO: Add Particle Effects upon crash.
