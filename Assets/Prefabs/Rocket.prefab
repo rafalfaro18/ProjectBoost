@@ -241,5 +241,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelLoadDelay: 2
-  successSfx: {fileID: 8300000, guid: e3f4422c70d0c444ba0fd75e97c361b6, type: 3}
-  defeatSfx: {fileID: 8300000, guid: b843fff307b6246f48fbfb65bd37899a, type: 3}
+  success: {fileID: 8300000, guid: e3f4422c70d0c444ba0fd75e97c361b6, type: 3}
+  crash: {fileID: 8300000, guid: b843fff307b6246f48fbfb65bd37899a, type: 3}
