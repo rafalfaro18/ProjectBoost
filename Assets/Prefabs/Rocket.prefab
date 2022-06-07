@@ -503,9 +503,9 @@ MonoBehaviour:
   mainThrust: 1000
   rotationThrust: 100
   mainEngine: {fileID: 8300000, guid: 3286db6f4ca3e4704b624a804ea9ead6, type: 3}
-  mainBooster: {fileID: 1452758794197418402}
-  leftBooster: {fileID: 3694646419793268380}
-  rightBooster: {fileID: 730229842671379185}
+  mainEngineParticles: {fileID: 1452758794197418402}
+  leftThrusterParticles: {fileID: 3694646419793268380}
+  rightThrusterParticles: {fileID: 730229842671379185}
 --- !u!82 &1013717750
 AudioSource:
   m_ObjectHideFlags: 0
