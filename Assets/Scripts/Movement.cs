@@ -46,14 +46,14 @@ public class Movement : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             ApplyRotation(rotationThrust);
-            if(!leftThrusterParticles.isPlaying){
-                leftThrusterParticles.Play();
+            if(!rightThrusterParticles.isPlaying){
+                rightThrusterParticles.Play();
             }
         }
         else if (Input.GetKey(KeyCode.D)) {
             ApplyRotation(-rotationThrust);
-            if(!rightThrusterParticles.isPlaying){
-                rightThrusterParticles.Play();
+            if(!leftThrusterParticles.isPlaying){
+                leftThrusterParticles.Play();
             }
         } else {
             leftThrusterParticles.Stop();
