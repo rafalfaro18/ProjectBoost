@@ -15,6 +15,21 @@ public class CollisionHandler : MonoBehaviour
     void Start(){
         audioSource = GetComponent<AudioSource>();
     }
+
+    void Update(){
+        RespondToDebugKeys();
+    }
+
+    void RespondToDebugKeys(){
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            LoadNextLevel();
+        }
+        else if (Input.GetKeyDown(KeyCode.C))
+        {
+            GetComponent<BoxCollider>().enabled = !GetComponent<BoxCollider>().enabled;
+        }
+    }
     
     void OnCollisionEnter(Collision other) {
         if (isTransitioning) { return; }
