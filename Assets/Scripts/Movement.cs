@@ -30,9 +30,11 @@ public class Movement : MonoBehaviour
     void ProcessThrust() {
         if (Input.GetKey(KeyCode.Space)) {
             rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime); // Relative to the object.
-            mainEngineParticles.Play();
             if(!audioSource.isPlaying){
                 audioSource.PlayOneShot(mainEngine);
+            }
+            if(!mainEngineParticles.isPlaying){
+                mainEngineParticles.Play();
             }
         } else {
             audioSource.Stop();
@@ -44,11 +46,15 @@ public class Movement : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             ApplyRotation(rotationThrust);
-            leftThrusterParticles.Play();
+            if(!leftThrusterParticles.isPlaying){
+                leftThrusterParticles.Play();
+            }
         }
         else if (Input.GetKey(KeyCode.D)) {
             ApplyRotation(-rotationThrust);
-            rightThrusterParticles.Play();
+            if(!rightThrusterParticles.isPlaying){
+                rightThrusterParticles.Play();
+            }
         } else {
             leftThrusterParticles.Stop();
             rightThrusterParticles.Stop();
