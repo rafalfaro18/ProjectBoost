@@ -19,7 +19,7 @@ public class Oscillator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float cycles = Time.time / period; // continually growing over time.
+        float cycles = period == 0 ? Time.time / 0.00001f : Time.time / period; // continually growing over time.
         const float tau = Mathf.PI * 2; // A full cycle of a sine wave 6.283.
         float rawSineWave = Mathf.Sin(cycles * tau); // going from -1 to 1
 
