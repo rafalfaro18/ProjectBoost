@@ -27,6 +27,6 @@ public class Oscillator : MonoBehaviour
         movementFactor = (rawSineWave + 1f) / 2; // recalculated to 0-1 instead of -1 to 1. Comes back to the origin point.
 
         Vector3 offset = movementVector * movementFactor;
-        transform.position = offset;
+        transform.position = startingPosition + offset;
     }
 }
