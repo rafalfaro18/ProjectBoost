@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Timing.unity
     guid: dc5bdfff76e52485a9fe8aa6c104bef4
+  - enabled: 1
+    path: Assets/Scenes/Gap.unity
+    guid: 390ef2f28a2494730823911c8f6eeb8a
   m_configObjects: {}
