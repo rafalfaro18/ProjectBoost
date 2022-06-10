@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Blocky.unity
     guid: 9becb39f668af4ea9a55afa87e3da0ba
+  - enabled: 1
+    path: Assets/Scenes/Chute.unity
+    guid: 26f1cafd1b09e40daa774cba8a5bdfb1
   m_configObjects: {}
